@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main_view2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1" >
+
+    <LinearLayout
+        android:id="@+id/activity_main_view2_linear1"
+        android:background="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/news_tabs_title_height"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="您一共定制了9个关键词"
+            android:textSize="@dimen/news_title_text_size" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_news_select"
+            android:onClick="btnNewsSelectClick"
+            android:src="@drawable/btn_news_select_up" />
+    </LinearLayout>
+    
+    <com.linpeng.view.LPGridView 
+        android:id="@+id/activity_main_lpgrid"
+        android:layout_below="@+id/activity_main_view2_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/activity_main_view2_edit_love_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="8"
+            android:hint="定制您感兴趣的话题" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:layout_weight="1"
+            android:onClick="btnAddLoveNews"
+            android:background="@drawable/selector_btn_news_select"
+            android:src="@drawable/btn_add_love_news" />
+    </LinearLayout>
+
+</RelativeLayout>
